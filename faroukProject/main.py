@@ -3,7 +3,8 @@ import json
 from fuzzywuzzy import fuzz
 
 # Load the JSON file
-json_file = 'data.json'
+import os
+json_file = os.path.join(os.path.dirname(__file__), 'data.json')
 
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
